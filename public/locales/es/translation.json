@@ -1,0 +1,48 @@
+{
+  "app": {
+    "theme": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Automático"
+    },
+    "menu": {
+      "title": "Menú",
+      "description": "Configuración",
+      "open": "Abrir menú",
+      "close": "Cerrar menú",
+      "language": "Idioma",
+      "theme": "Tema",
+      "motion": {
+        "title": "Animaciones",
+        "on": "Desactivar animaciones",
+        "off": "Activar animaciones"
+      },
+      "code": {
+        "on": "Ocultar código fuente",
+        "off": "Mostrar código fuente"
+      }
+    },
+    "select": {
+      "file": "Seleccionar página",
+      "language": "Seleccionar idioma",
+      "theme": "Seleccionar tema"
+    }
+  },
+  "index": {
+    "name": {
+      "prefix": "Me llamo ",
+      "value": "Stepan"
+    },
+    "position": {
+      "prefix": "Soy un ",
+      "value": "desarrollador frontend"
+    },
+    "stack": "Mi stack tecnológico principal:"
+  },
+  "tech": {
+    "message": "Tecnología con la que trabajo:"
+  },
+  "builtWith": {
+    "message": "Esta aplicación está hecha con:"
+  }
+}

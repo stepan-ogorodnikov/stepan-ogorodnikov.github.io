@@ -1,0 +1,48 @@
+{
+  "app": {
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "menu": {
+      "title": "Menu",
+      "description": "Settings",
+      "open": "Open menu",
+      "close": "Close menu",
+      "language": "Language",
+      "theme": "Theme",
+      "motion": {
+        "title": "Animations",
+        "on": "Disable animations",
+        "off": "Enable animations"
+      },
+      "code": {
+        "on": "Hide source code",
+        "off": "Show source code"
+      }
+    },
+    "select": {
+      "file": "Select page",
+      "language": "Select language",
+      "theme": "Select theme"
+    }
+  },
+  "index": {
+    "name": {
+      "prefix": "My name is ",
+      "value": "Stepan"
+    },
+    "position": {
+      "prefix": "I'm a ",
+      "value": "frontend developer"
+    },
+    "stack": "My primary tech stack:"
+  },
+  "tech": {
+    "message": "Tech that I work with:"
+  },
+  "builtWith": {
+    "message": "This app is built with:"
+  }
+}
