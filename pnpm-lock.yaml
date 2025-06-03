@@ -93,9 +93,6 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.1.2(@types/react@19.1.2)
-      oxlint:
-        specifier: ^0.17.0
-        version: 0.17.0
       shiki:
         specifier: ^3.3.0
         version: 3.3.0
@@ -292,46 +289,6 @@ packages:
   '@next/swc-win32-x64-msvc@15.3.1':
     resolution: {integrity: sha512-3PMvF2zRJAifcRNni9uMk/gulWfWS+qVI/pagd+4yLF5bcXPZPPH2xlYRYOsUjmCJOXSTAC2PjRzbhsRzR2fDQ==}
     engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [win32]
-
-  '@oxlint/darwin-arm64@0.17.0':
-    resolution: {integrity: sha512-py/N0yTMbdy5Kd1RFMMgFqzO5Qwc5MbHSCA0BvSx/GnC3n7yPstcEFSSdZzb+HaANI00xn4dwjYo6HVEFHhuWA==}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@oxlint/darwin-x64@0.17.0':
-    resolution: {integrity: sha512-rQUFu6Ci8gmBHTgb2EMKYNZWCmBB8sSW7SAxBes9k0esonKsioDNjT51CsfKZhXyaMtaM70hiVhSCBc0NqUEJg==}
-    cpu: [x64]
-    os: [darwin]
-
-  '@oxlint/linux-arm64-gnu@0.17.0':
-    resolution: {integrity: sha512-NoAWscdfVj6Sci3NdbHHc1OivSSKpwtkLff5SoAM8XgJ9t7flf+zW7XOy3OeSgZAxNbcF4QGruv+XcBLR7tWMA==}
-    cpu: [arm64]
-    os: [linux]
-
-  '@oxlint/linux-arm64-musl@0.17.0':
-    resolution: {integrity: sha512-VQRmSdbuc0rpSZoLqdhKJG9nUjJmEymOU60dO3lKlCT5YXME4dxA+jf1AigtnmJS5FgOxQm54ECF9lh6dyP0ew==}
-    cpu: [arm64]
-    os: [linux]
-
-  '@oxlint/linux-x64-gnu@0.17.0':
-    resolution: {integrity: sha512-KcaXWkBfqt7weerU1EXJysEupEHB8AtJytufBOQMuLE5vx2OoAbjAk0vt2V14W8Lss9Sz+ET7nXo6ZAEku4vCA==}
-    cpu: [x64]
-    os: [linux]
-
-  '@oxlint/linux-x64-musl@0.17.0':
-    resolution: {integrity: sha512-yWbFXWKKTrH4zR0FI1V6KDJp5NqOLFe1LZbKNeaoS1wtq5/aFPeM+d9dttGLoA5u6G9uhIK/nSnrPmtuNLPU4Q==}
-    cpu: [x64]
-    os: [linux]
-
-  '@oxlint/win32-arm64@0.17.0':
-    resolution: {integrity: sha512-zdoB3mbvcx3eGOh6ElPJ01S2MOzyZo/gijeHw7yb2PXcRis+3clVje6kpnG7/TN69zoHv7WwDX6poJu8FURTqg==}
-    cpu: [arm64]
-    os: [win32]
-
-  '@oxlint/win32-x64@0.17.0':
-    resolution: {integrity: sha512-gxVYAOy/8IAWgmsaXDxRJvOr7l61DUDj6s7tXImzXqBAH/An6yJZGr1tR+5BsACVw/3hcCPOUbotXGS4+vZNZQ==}
     cpu: [x64]
     os: [win32]
 
@@ -1195,11 +1152,6 @@ packages:
   oniguruma-to-es@4.3.1:
     resolution: {integrity: sha512-VtX1kepWO+7HG7IWV5v72JhiqofK7XsiHmtgnvurnNOTdIvE5mrdWYtsOrQyrXCv1L2Ckm08hywp+MFO7rC4Ug==}
 
-  oxlint@0.17.0:
-    resolution: {integrity: sha512-LCXomDhPGbDUZ/T+ScFA0tjh7A5QgYwPRCw7XFlJxRD2URBV8wj2lLvepbQ9yS/Q6SGhVfHQMpziQytajl8NcQ==}
-    engines: {node: '>=8.*'}
-    hasBin: true
-
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -1589,30 +1541,6 @@ snapshots:
     optional: true
 
   '@next/swc-win32-x64-msvc@15.3.1':
-    optional: true
-
-  '@oxlint/darwin-arm64@0.17.0':
-    optional: true
-
-  '@oxlint/darwin-x64@0.17.0':
-    optional: true
-
-  '@oxlint/linux-arm64-gnu@0.17.0':
-    optional: true
-
-  '@oxlint/linux-arm64-musl@0.17.0':
-    optional: true
-
-  '@oxlint/linux-x64-gnu@0.17.0':
-    optional: true
-
-  '@oxlint/linux-x64-musl@0.17.0':
-    optional: true
-
-  '@oxlint/win32-arm64@0.17.0':
-    optional: true
-
-  '@oxlint/win32-x64@0.17.0':
     optional: true
 
   '@radix-ui/number@1.1.1': {}
@@ -2401,17 +2329,6 @@ snapshots:
       oniguruma-parser: 0.12.0
       regex: 6.0.1
       regex-recursion: 6.0.2
-
-  oxlint@0.17.0:
-    optionalDependencies:
-      '@oxlint/darwin-arm64': 0.17.0
-      '@oxlint/darwin-x64': 0.17.0
-      '@oxlint/linux-arm64-gnu': 0.17.0
-      '@oxlint/linux-arm64-musl': 0.17.0
-      '@oxlint/linux-x64-gnu': 0.17.0
-      '@oxlint/linux-x64-musl': 0.17.0
-      '@oxlint/win32-arm64': 0.17.0
-      '@oxlint/win32-x64': 0.17.0
 
   picocolors@1.1.1: {}
 
