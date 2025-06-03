@@ -119,7 +119,7 @@ export default function Index() {
             <ExternalLink
               className="w-24 text-center text-lg/12 font-mono"
               size={[24, 12]}
-              href=""
+              href="https://github.com/stepan-ogorodnikov"
               target="_blank"
               rel="noreferrer"
             >
