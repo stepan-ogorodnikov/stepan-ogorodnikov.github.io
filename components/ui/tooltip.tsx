@@ -46,16 +46,44 @@ function TooltipContent({
         data-slot="tooltip-content"
         sideOffset={sideOffset}
         className={cn(
-          "bg-primary text-primary-foreground animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded-md px-3 py-1.5 text-xs text-balance",
+          "z-50 w-fit px-3 py-1.5 rounded-md text-xs text-balance origin-(--radix-tooltip-content-transform-origin)",
+          "bg-tooltip fg-tooltip shadow-tooltip animate-in fade-in-0 zoom-in-95",
+          "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+          "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
           className,
         )}
         {...props}
       >
         {children}
-        <TooltipPrimitive.Arrow className="bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
+        <TooltipPrimitive.Arrow asChild>
+          <TooltipArrow />
+        </TooltipPrimitive.Arrow>
       </TooltipPrimitive.Content>
     </TooltipPrimitive.Portal>
   );
 }
+
+export const TooltipArrow = () => {
+  return (
+    <svg
+      width="20"
+      height="12"
+      viewBox="0 0 20 12"
+      className="z-51 relative fill-bg-tooltip"
+    >
+      <defs>
+        <filter id="tooltip-arrow-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow
+            dx="0"
+            dy="0"
+            stdDeviation="1"
+            floodColor="oklch(0.1 0.005 260 / 0.25)"
+          />
+        </filter>
+      </defs>
+      <path d="M 0 0 L10 8 L 20 0" filter="url(#tooltip-arrow-shadow)" />
+    </svg>
+  );
+};
 
 export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger };

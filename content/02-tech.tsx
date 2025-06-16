@@ -48,10 +48,11 @@ export default function Stacks() {
       clearTimeout(timeout);
     };
   }, []);
+
   return (
     <Page>
       <motion.div
-        className="text-xl/12 font-bold text-lighter-fg"
+        className="text-xl/12 font-bold fg-lighter"
         onAnimationComplete={() => startAnimation("typescript")}
         {...data.message}
       >

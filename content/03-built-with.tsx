@@ -35,7 +35,7 @@ export default function BuiltWith() {
     <Page>
       <div className="w-72 relative flex flex-col gap-6">
         <motion.div
-          className="self-center text-xl/12 font-bold text-lighter-fg"
+          className="self-center text-xl/12 font-bold fg-lighter whitespace-nowrap"
           onAnimationComplete={() => startAnimation("TypeScript")}
           {...data.message}
         >

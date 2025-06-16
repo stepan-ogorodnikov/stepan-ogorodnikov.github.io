@@ -34,7 +34,7 @@ i18n
 export default function Layout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <div className="flex flex-col sm:flex-row w-full h-full overflow-hidden">
-      <aside className="shrink sm:h-full sm:border sm:border-right bg-editor">
+      <aside className="shrink w-54 sm:h-full sm:border sm:border-right bg-editor">
         <HeaderDesktop />
         <DesktopNav />
       </aside>

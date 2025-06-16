@@ -27,19 +27,18 @@ function SelectValue({
 
 const selectTriggerVariants = cva(
   [
-    "flex items-center justify-between gap-2 rounded-md w-fit h-9 px-2 py-2 bg-transparent text-sm whitespace-nowrap transition-[color,box-shadow] outline-none",
-    "focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-    "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-    "disabled:cursor-not-allowed disabled:opacity-50",
+    "flex items-center justify-between gap-2",
+    "w-fit h-9 p-2 rounded-md text-sm",
+    "bg-transparent whitespace-nowrap transition-[background-color,color,box-shadow] outline-none",
+    "focus-visible:focus-ring",
+    // "disabled:cursor-not-allowed disabled:opacity-50",
     "*:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2",
-    // "data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground",
-    // "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   ],
   {
     variants: {
       variant: {
-        default: ["bg-background dark:bg-input/30 dark:hover:bg-input/50 border border-input shadow-xs"],
-        ghost: ["hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50"],
+        default: "bg-select border border-input",
+        ghost: "hover:bg-toggle-on hover:bg-toggle-hover",
       },
     },
     defaultVariants: {
@@ -88,7 +87,11 @@ function SelectContent({
       <SelectPrimitive.Content
         data-slot="select-content"
         className={cn(
-          "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-(--radix-select-content-available-height) min-w-[8rem] origin-(--radix-select-content-transform-origin) overflow-x-hidden overflow-y-auto rounded-md border shadow-md",
+          "relative z-50 min-w-32 max-h-(--radix-select-content-available-height) origin-(--radix-select-content-transform-origin) overflow-x-hidden overflow-y-auto",
+          "bg-popover fg-popover rounded-md border shadow-md",
+          "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0",
+          "data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
           position === "popper"
             && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           className,
@@ -119,7 +122,7 @@ function SelectLabel({
   return (
     <SelectPrimitive.Label
       data-slot="select-label"
-      className={cn("text-muted-foreground px-2 py-1.5 text-xs", className)}
+      className={cn("fg-muted px-2 py-1.5 text-xs", className)}
       {...props}
     />
   );
@@ -135,7 +138,7 @@ function SelectItem({
       data-slot="select-item"
       className={cn(
         "relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-hidden select-none",
-        "focus:bg-accent focus:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground",
+        "focus:bg-accent focus:fg-accent [&_svg:not([class*='text-'])]:fg-muted",
         "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
         "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         "*:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
@@ -160,7 +163,7 @@ function SelectSeparator({
   return (
     <SelectPrimitive.Separator
       data-slot="select-separator"
-      className={cn("bg-border pointer-events-none -mx-1 my-1 h-px", className)}
+      className={cn("bg-border-base pointer-events-none -mx-1 my-1 h-px", className)}
       {...props}
     />
   );

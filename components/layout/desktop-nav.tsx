@@ -16,17 +16,19 @@ export function DesktopNav() {
         {files.map((file, i) => (
           <li key={i}>
             <Link
-              className="relative flex flex-row items-center gap-2 w-full p-2 cursor-pointer"
+              className="relative flex w-full p-2 cursor-pointer"
               href={`/${file}`}
             >
-              <NavFileIcon />
-              <span className="font-mono font-medium">
-                {file}
-              </span>
+              <div className="z-1 relative flex flex-row items-center gap-2">
+                <NavFileIcon />
+                <span className="font-mono font-medium">
+                  {file}
+                </span>
+              </div>
               {path == `/${file}` && (
                 <motion.div
                   layoutId="activeRouteIndicator"
-                  className="absolute inset-0 bg-black/5 dark:bg-white/10"
+                  className="absolute inset-0 bg-toggle-on"
                 />
               )}
             </Link>

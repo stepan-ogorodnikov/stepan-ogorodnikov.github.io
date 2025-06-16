@@ -5,6 +5,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/componen
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { fileSet, filesSet } from "@/store/nav-slice";
 import { type PropsWithChildren, type ReactNode, useEffect } from "react";
+import { SourceCode } from "./source-code";
 
 type Props = PropsWithChildren & {
   files: string[];
@@ -38,7 +39,7 @@ export function App({ files, filename, source, children }: Props) {
             withHandle
           />
           <ResizablePanel className="max-sm:hidden relative" id="code-panel" order={2}>
-            {source}
+            <SourceCode code={source} />
           </ResizablePanel>
         </>
       )}

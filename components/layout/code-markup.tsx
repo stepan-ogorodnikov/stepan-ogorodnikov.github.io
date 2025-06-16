@@ -4,7 +4,7 @@ type Props = {
   code: string;
 };
 
-export async function Code({ code }: Props) {
+export async function CodeMarkup({ code }: Props) {
   const html = await codeToHtml(code, {
     lang: "jsx",
     themes: {
@@ -24,5 +24,5 @@ export async function Code({ code }: Props) {
     ],
   });
 
-  return <div className="max-h-[100vh] overflow-auto" dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }

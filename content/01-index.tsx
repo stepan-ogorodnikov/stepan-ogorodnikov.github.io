@@ -39,7 +39,7 @@ export default function Index() {
   return (
     <Page>
       <div className="w-72 relative">
-        <div className="flex flex-col items-center justify-center overflow-hidden">
+        <div className="flex flex-col items-center justify-center">
           <div className="flex justify-center relative w-full p-6">
             <motion.img
               className="size-36 rounded-full border-3 border-neutral-200"
@@ -63,11 +63,11 @@ export default function Index() {
               </motion.span>
             </div>
             <motion.div
-              className="grow text-center"
+              className="grow text-center whitespace-nowrap"
               onAnimationComplete={() => startAnimation("nameValue")}
               {...data.namePrefix}
             >
-              <span className="text-lighter-fg">{t("index.name.prefix")}</span>
+              <span className="fg-lighter">{t("index.name.prefix")}</span>
               <Typewriter
                 onAnimationComplete={() => startAnimation("positionPrefix")}
                 {...data.nameValue}
@@ -77,11 +77,11 @@ export default function Index() {
             </motion.div>
           </div>
           <motion.div
-            className="text-xl/12 font-bold"
+            className="text-xl/12 font-bold whitespace-nowrap"
             onAnimationComplete={() => startAnimation("positionValue")}
             {...data.positionPrefix}
           >
-            <span className="text-lighter-fg">{t("index.position.prefix")}</span>
+            <span className="fg-lighter">{t("index.position.prefix")}</span>
             <Typewriter
               onAnimationComplete={() => startAnimation("stack")}
               {...data.positionValue}
@@ -90,11 +90,11 @@ export default function Index() {
             </Typewriter>
           </motion.div>
           <motion.div
-            className="mt-6 text-xl/12 font-bold"
+            className="mt-6 text-xl/12 font-bold whitespace-nowrap"
             onAnimationComplete={() => startAnimation("stackItems")}
             {...data.stack}
           >
-            <span className="text-lighter-fg">{t("index.stack")}</span>
+            <span className="fg-lighter">{t("index.stack")}</span>
           </motion.div>
           <motion.div
             className="flex flex-row justify-center gap-6 mt-6"

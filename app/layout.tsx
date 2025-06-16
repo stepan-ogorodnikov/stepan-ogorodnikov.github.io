@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sans.variable} ${mono.variable} h-screen w-screen min-w-xs bg-background text-foreground scheme-light dark:scheme-dark antialiased font-sans`}
+        className={`${sans.variable} ${mono.variable} h-screen w-screen min-w-xs bg-base fg-base scheme-light dark:scheme-dark antialiased font-sans`}
       >
         <StoreProvider>
           <TooltipProvider>

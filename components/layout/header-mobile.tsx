@@ -22,7 +22,7 @@ export function HeaderMobile() {
             <MobileNav />
             <Drawer.Trigger asChild>
               <Button
-                className="size-9 text-secondary-fg"
+                className="size-9 fg-lighter"
                 variant="ghost"
                 aria-label={t(`app.menu.${isOpen ? "close" : "open"}`)}
               >

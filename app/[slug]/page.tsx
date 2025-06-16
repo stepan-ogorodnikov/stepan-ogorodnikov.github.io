@@ -1,6 +1,6 @@
 import { PageProps } from "@/.next/types/app/[slug]/page";
 import { App } from "@/components/layout/app";
-import { Code } from "@/components/layout/code";
+import { CodeMarkup } from "@/components/layout/code-markup";
 import { getContentFileSlug } from "@/lib/utils";
 import { promises as fs } from "fs";
 import path from "path";
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 export default async function ContentPage({ params }: PageProps) {
   const { slug } = await params;
   const source = await getSource(slugs[slug]) || "";
-  const code = <Code code={source} />;
+  const code = <CodeMarkup code={source} />;
   const Component = await import(`@/content/${slugs[slug]}`).then(m => m.default);
 
   return (
