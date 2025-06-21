@@ -1,5 +1,6 @@
 "use client";
 
+import { ExternalLink } from "@/components/content/external-link";
 import { Page } from "@/components/content/page";
 import { TechCard } from "@/components/content/tech-card";
 import { Typewriter } from "@/components/content/typewriter";
@@ -67,6 +68,21 @@ export default function BuiltWith() {
             </motion.li>
           ))}
         </ul>
+        <motion.div
+          className="flex flex-row items-center justify-center relative mt-6"
+          onAnimationComplete={() => setIsDone()}
+          {...data.github}
+        >
+          <ExternalLink
+            className="w-48 text-center text-lg/12 font-mono"
+            size={[48, 12]}
+            href="https://github.com/stepan-ogorodnikov/stepan-ogorodnikov.github.io"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("builtWith.sourceCode")}
+          </ExternalLink>
+        </motion.div>
       </div>
     </Page>
   );

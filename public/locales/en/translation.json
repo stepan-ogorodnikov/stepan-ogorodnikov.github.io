@@ -43,6 +43,7 @@
     "message": "Tech that I work with:"
   },
   "builtWith": {
-    "message": "This app is built with:"
+    "message": "This app is built with:",
+    "sourceCode": "Source code"
   }
 }
