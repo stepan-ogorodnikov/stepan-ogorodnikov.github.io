@@ -5,7 +5,7 @@ import { Page } from "@/components/content/page";
 import { TechCard } from "@/components/content/tech-card";
 import { Typewriter } from "@/components/content/typewriter";
 import { usePage } from "@/hooks/use-page";
-import { fadeIn, slideDown } from "@/lib/animations";
+import { fadeIn, slideDown, slideUp } from "@/lib/animations";
 import { createObjectFromProperties } from "@/lib/utils";
 import { motion } from "motion/react";
 import { useEffect } from "react";
@@ -16,6 +16,7 @@ const STACK = ["TypeScript", "React", "Next.js", "Redux", "Tailwind CSS", "Motio
 const ANIMATIONS = {
   message: slideDown,
   ...createObjectFromProperties(STACK, fadeIn),
+  sourceCode: slideUp,
 };
 
 export default function BuiltWith() {
@@ -59,7 +60,7 @@ export default function BuiltWith() {
                   if (index < STACK.length - 1) {
                     startAnimation(STACK[index + 1]);
                   } else {
-                    setIsDone();
+                    startAnimation("sourceCode");
                   }
                 }}
               >
@@ -71,7 +72,7 @@ export default function BuiltWith() {
         <motion.div
           className="flex flex-row items-center justify-center relative mt-6"
           onAnimationComplete={() => setIsDone()}
-          {...data.github}
+          {...data.sourceCode}
         >
           <ExternalLink
             className="w-48 text-center text-lg/12 font-mono"
